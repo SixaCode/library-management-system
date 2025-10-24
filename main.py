@@ -43,6 +43,15 @@ class Library:
 # FUNCTIONS FOR MENU #
 ######################
 
+def listAllBooks():
+    Library.listAllBooks()
+
+def listAllAvailableBooks():
+    Library.listAllAvailableBooks()
+
+def addABook(name, author, isbn):
+    Book(name, author, isbn)
+
 
 
 ##########################
@@ -52,6 +61,12 @@ class Library:
 if __name__ == "__main__":
     
     while(True):
+
+        # Test
+        """
+        Book("yes i am", "me and myself", 149053143)
+        Library.listAllBooks()
+        """
 
         # Main menu
 
@@ -69,20 +84,14 @@ if __name__ == "__main__":
             case 0:     # Exit program
                 break
             case 1:     # List all books
-                pass
+                listAllBooks()
             case 2:     # List all available books
-                pass
+                listAllAvailableBooks()
             case 3:     # Add a book
-                pass
+                addABook()
             case 4:     # Remove a book
                 pass
             case 5:     # Reserve a book
                 pass
             case _:     # Invalid option
                 print("Invalid option. Please try again.")
-
-
-
-
-Book("yes i am", "me and myself", 149053143)
-Library.listAllBooks()
